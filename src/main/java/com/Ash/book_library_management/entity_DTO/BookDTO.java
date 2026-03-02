@@ -1,7 +1,6 @@
-package com.Ash.book_library_management.entityDTO;
+package com.Ash.book_library_management.entity_DTO;
 
 import com.Ash.book_library_management.entity.Author;
-import jakarta.persistence.*;
 
 public class BookDTO {
 

@@ -1,10 +1,6 @@
-package com.Ash.book_library_management.entityDTO;
-
-import com.Ash.book_library_management.entity.Book;
-import jakarta.persistence.OneToMany;
+package com.Ash.book_library_management.entity_DTO;
 
 import java.time.LocalDate;
-import java.util.List;
 
 public class AuthorDTO {
     private Long id;

@@ -1,9 +1,6 @@
-package com.Ash.book_library_management.entityDTO;
+package com.Ash.book_library_management.entity_DTO;
 
 import com.Ash.book_library_management.entity.Role;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
 public class EmployeeDTO {
 
