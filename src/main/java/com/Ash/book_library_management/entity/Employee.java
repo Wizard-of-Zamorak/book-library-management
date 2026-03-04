@@ -2,6 +2,8 @@ package com.Ash.book_library_management.entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name="employees")
 public class Employee {
@@ -12,14 +14,16 @@ public class Employee {
 
     private String firstName;
     private String lastName;
+    private LocalDate dateOfBirth;
     private Role role;
 
     public Employee() {
     }
 
-    public Employee(String firstName, String lastName, Role role) {
+    public Employee(String firstName, String lastName, Role role, LocalDate dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
         this.role = role;
     }
 
@@ -45,6 +49,14 @@ public class Employee {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public Role getRole() {

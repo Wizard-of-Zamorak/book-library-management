@@ -2,19 +2,23 @@ package com.Ash.book_library_management.entity_DTO;
 
 import com.Ash.book_library_management.entity.Role;
 
+import java.time.LocalDate;
+
 public class EmployeeDTO {
 
     private Long id;
     private String firstName;
     private String lastName;
+    private LocalDate dateOfBirth;
     private Role role;
 
     public EmployeeDTO() {
     }
 
-    public EmployeeDTO(String firstName, String lastName, Role role) {
+    public EmployeeDTO(String firstName, String lastName, Role role, LocalDate dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
         this.role = role;
     }
 
@@ -40,6 +44,14 @@ public class EmployeeDTO {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public Role getRole() {

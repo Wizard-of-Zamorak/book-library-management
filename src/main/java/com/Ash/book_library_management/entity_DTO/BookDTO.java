@@ -6,16 +6,16 @@ public class BookDTO {
 
     private long id;
     private  String title;
-    private Author author;
+    private Long authorId;
     private String genre;
     private int year;
 
     public BookDTO() {
     }
 
-    public BookDTO(String title, Author author, String genre, int year) {
+    public BookDTO(String title, Long authorId, String genre, int year) {
         this.title = title;
-        this.author = author;
+        this.authorId = authorId;
         this.genre = genre;
         this.year = year;
     }
@@ -36,12 +36,12 @@ public class BookDTO {
         this.title = title;
     }
 
-    public Author getAuthor() {
-        return author;
+    public Long getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthorId(Long authorId) {
+        this.authorId = authorId;
     }
 
     public String getGenre() {
