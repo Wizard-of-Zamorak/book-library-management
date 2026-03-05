@@ -1,25 +1,19 @@
-package com.Ash.book_library_management.entity;
-
-import jakarta.persistence.*;
+package com.Ash.book_library_management.entity_DTO;
 
 import java.time.LocalDate;
-import java.util.List;
 
-@Entity
-public class Member {
+public class MemberDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String firstName;
     private String lastName;
     private LocalDate dateOfBirth;
-    private boolean active; // if they can borrow books
+    private boolean active;
 
-    public Member() {}
+    public MemberDTO() {}
 
-    public Member(String firstName, String lastName, LocalDate dateOfBirth, boolean active) {
+    public MemberDTO(Long id, String firstName, String lastName, LocalDate dateOfBirth, boolean active) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;

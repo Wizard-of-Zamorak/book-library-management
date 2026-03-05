@@ -27,8 +27,8 @@ public class EmployeeRestController {
 
     @GetMapping("/{id}")
     public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable Long id) {
-        EmployeeDTO EmployeeById = employeeService.getEmployeeById(id);
-        return ResponseEntity.ok(EmployeeById);
+        EmployeeDTO employeeById = employeeService.getEmployeeById(id);
+        return ResponseEntity.ok(employeeById);
     }
 
     @PostMapping

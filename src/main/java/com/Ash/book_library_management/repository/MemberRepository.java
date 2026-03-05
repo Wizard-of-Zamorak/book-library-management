@@ -1,9 +1,10 @@
 package com.Ash.book_library_management.repository;
 
-import com.Ash.book_library_management.entity.Author;
+import com.Ash.book_library_management.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+
 @Repository
-public interface AuthorRepository extends JpaRepository<Author, Long> {
+public interface MemberRepository extends JpaRepository<Member, Long> {
 }
