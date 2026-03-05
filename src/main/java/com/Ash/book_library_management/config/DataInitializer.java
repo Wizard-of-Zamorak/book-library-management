@@ -1,12 +1,10 @@
 package com.Ash.book_library_management.config;
 
-import com.Ash.book_library_management.entity.Author;
-import com.Ash.book_library_management.entity.Book;
-import com.Ash.book_library_management.entity.Employee;
-import com.Ash.book_library_management.entity.Role;
+import com.Ash.book_library_management.entity.*;
 import com.Ash.book_library_management.repository.AuthorRepository;
 import com.Ash.book_library_management.repository.BookRepository;
 import com.Ash.book_library_management.repository.EmployeeRepository;
+import com.Ash.book_library_management.repository.MemberRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -19,13 +17,16 @@ public class DataInitializer implements CommandLineRunner {
     private final AuthorRepository authorRepository;
     private final BookRepository bookRepository;
     private final EmployeeRepository employeeRepository;
+    private final MemberRepository memberRepository;
 
     public DataInitializer(AuthorRepository authorRepository,
                            BookRepository bookRepository,
-                           EmployeeRepository employeeRepository) {
+                           EmployeeRepository employeeRepository,
+                           MemberRepository memberRepository) {
         this.authorRepository = authorRepository;
         this.bookRepository = bookRepository;
         this.employeeRepository = employeeRepository;
+        this.memberRepository = memberRepository;
     }
 
     @Override
@@ -73,6 +74,13 @@ public class DataInitializer implements CommandLineRunner {
                 new Book("I, Robot", author6, "Sci-Fi", 1950, 2),
                 new Book("The Caves of Steel", author6, "Sci-Fi", 1953, 3)
         ));
+
+        // --- Members ---
+        Member member1 = new Member("John", "Doe", LocalDate.of(1990, 5, 10), true);
+        Member member2 = new Member("Jane", "Smith", LocalDate.of(1985, 8, 22), true);
+        Member member3 = new Member("Alice", "Johnson", LocalDate.of(2000, 3, 15), false);
+
+        memberRepository.saveAll(Arrays.asList(member1, member2, member3));
 
         // --- Employees ---
         Employee emp1 = new Employee("Alice", "Johnson", Role.LIBRARIAN, LocalDate.of(1985, 4, 12));
