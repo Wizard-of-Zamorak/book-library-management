@@ -1,7 +1,7 @@
 package com.Ash.book_library_management.restControllers;
 
 import com.Ash.book_library_management.entity_DTO.AuthorDTO;
-import com.Ash.book_library_management.services.AuthorService;
+import com.Ash.book_library_management.service.AuthorService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

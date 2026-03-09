@@ -1,7 +1,7 @@
 package com.Ash.book_library_management.restControllers;
 
 import com.Ash.book_library_management.entity_DTO.MemberDTO;
-import com.Ash.book_library_management.services.MemberService;
+import com.Ash.book_library_management.service.MemberService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

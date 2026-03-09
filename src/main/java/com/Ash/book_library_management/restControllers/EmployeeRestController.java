@@ -2,7 +2,7 @@ package com.Ash.book_library_management.restControllers;
 
 import com.Ash.book_library_management.entity.Role;
 import com.Ash.book_library_management.entity_DTO.EmployeeDTO;
-import com.Ash.book_library_management.services.EmployeeService;
+import com.Ash.book_library_management.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

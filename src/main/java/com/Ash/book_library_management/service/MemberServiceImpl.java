@@ -1,4 +1,4 @@
-package com.Ash.book_library_management.services;
+package com.Ash.book_library_management.service;
 
 import com.Ash.book_library_management.entity.Member;
 import com.Ash.book_library_management.entity_DTO.MemberDTO;

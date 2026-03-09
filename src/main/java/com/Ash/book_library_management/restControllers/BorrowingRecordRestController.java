@@ -2,7 +2,7 @@ package com.Ash.book_library_management.restControllers;
 
 
 import com.Ash.book_library_management.entity_DTO.BorrowingRecordDTO;
-import com.Ash.book_library_management.services.BorrowingRecordService;
+import com.Ash.book_library_management.service.BorrowingRecordService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
